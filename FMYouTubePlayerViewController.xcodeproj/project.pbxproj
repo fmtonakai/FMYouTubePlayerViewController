@@ -15,12 +15,14 @@
 		DAF539D715EA671D009DC052 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF539D615EA671D009DC052 /* AppDelegate.m */; };
 		DAF539DA15EA671D009DC052 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF539D815EA671D009DC052 /* MainStoryboard.storyboard */; };
 		DAF539DD15EA671D009DC052 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF539DC15EA671D009DC052 /* MasterViewController.m */; };
-		DAF539E015EA671D009DC052 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF539DF15EA671D009DC052 /* DetailViewController.m */; };
 		DAF539E815EA671D009DC052 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF539E715EA671D009DC052 /* SenTestingKit.framework */; };
 		DAF539E915EA671D009DC052 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF539C615EA671D009DC052 /* UIKit.framework */; };
 		DAF539EA15EA671D009DC052 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF539C815EA671D009DC052 /* Foundation.framework */; };
 		DAF539F215EA671D009DC052 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAF539F015EA671D009DC052 /* InfoPlist.strings */; };
 		DAF539F515EA671D009DC052 /* FMYouTubePlayerViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF539F415EA671D009DC052 /* FMYouTubePlayerViewControllerTests.m */; };
+		DAF53A0015EA6737009DC052 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF539FF15EA6737009DC052 /* MediaPlayer.framework */; };
+		DAF53A0315EA6759009DC052 /* FMYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF53A0215EA6759009DC052 /* FMYouTubePlayerViewController.m */; };
+		DAF53A0415EA6759009DC052 /* FMYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF53A0215EA6759009DC052 /* FMYouTubePlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +49,15 @@
 		DAF539D915EA671D009DC052 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DAF539DB15EA671D009DC052 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		DAF539DC15EA671D009DC052 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		DAF539DE15EA671D009DC052 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		DAF539DF15EA671D009DC052 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		DAF539E615EA671D009DC052 /* FMYouTubePlayerViewControllerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMYouTubePlayerViewControllerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF539E715EA671D009DC052 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DAF539EF15EA671D009DC052 /* FMYouTubePlayerViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FMYouTubePlayerViewControllerTests-Info.plist"; sourceTree = "<group>"; };
 		DAF539F115EA671D009DC052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAF539F315EA671D009DC052 /* FMYouTubePlayerViewControllerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMYouTubePlayerViewControllerTests.h; sourceTree = "<group>"; };
 		DAF539F415EA671D009DC052 /* FMYouTubePlayerViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMYouTubePlayerViewControllerTests.m; sourceTree = "<group>"; };
+		DAF539FF15EA6737009DC052 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		DAF53A0115EA6759009DC052 /* FMYouTubePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYouTubePlayerViewController.h; sourceTree = "<group>"; };
+		DAF53A0215EA6759009DC052 /* FMYouTubePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYouTubePlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF53A0015EA6737009DC052 /* MediaPlayer.framework in Frameworks */,
 				DAF539C715EA671D009DC052 /* UIKit.framework in Frameworks */,
 				DAF539C915EA671D009DC052 /* Foundation.framework in Frameworks */,
 				DAF539CB15EA671D009DC052 /* CoreGraphics.framework in Frameworks */,
@@ -103,6 +107,7 @@
 		DAF539C515EA671D009DC052 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAF539FF15EA6737009DC052 /* MediaPlayer.framework */,
 				DAF539C615EA671D009DC052 /* UIKit.framework */,
 				DAF539C815EA671D009DC052 /* Foundation.framework */,
 				DAF539CA15EA671D009DC052 /* CoreGraphics.framework */,
@@ -114,13 +119,12 @@
 		DAF539CC15EA671D009DC052 /* FMYouTubePlayerViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DAF539FE15EA6723009DC052 /* FMYouTubePlayerViewController */,
 				DAF539D515EA671D009DC052 /* AppDelegate.h */,
 				DAF539D615EA671D009DC052 /* AppDelegate.m */,
 				DAF539D815EA671D009DC052 /* MainStoryboard.storyboard */,
 				DAF539DB15EA671D009DC052 /* MasterViewController.h */,
 				DAF539DC15EA671D009DC052 /* MasterViewController.m */,
-				DAF539DE15EA671D009DC052 /* DetailViewController.h */,
-				DAF539DF15EA671D009DC052 /* DetailViewController.m */,
 				DAF539CD15EA671D009DC052 /* Supporting Files */,
 			);
 			path = FMYouTubePlayerViewController;
@@ -154,6 +158,15 @@
 				DAF539F015EA671D009DC052 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAF539FE15EA6723009DC052 /* FMYouTubePlayerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DAF53A0115EA6759009DC052 /* FMYouTubePlayerViewController.h */,
+				DAF53A0215EA6759009DC052 /* FMYouTubePlayerViewController.m */,
+			);
+			name = FMYouTubePlayerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +279,7 @@
 				DAF539D315EA671D009DC052 /* main.m in Sources */,
 				DAF539D715EA671D009DC052 /* AppDelegate.m in Sources */,
 				DAF539DD15EA671D009DC052 /* MasterViewController.m in Sources */,
-				DAF539E015EA671D009DC052 /* DetailViewController.m in Sources */,
+				DAF53A0315EA6759009DC052 /* FMYouTubePlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF539F515EA671D009DC052 /* FMYouTubePlayerViewControllerTests.m in Sources */,
+				DAF53A0415EA6759009DC052 /* FMYouTubePlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
