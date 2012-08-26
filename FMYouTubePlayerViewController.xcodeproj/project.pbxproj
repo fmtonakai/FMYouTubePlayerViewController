@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DABBB67615EA786700D317A8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DABBB67715EA786700D317A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		DAF539C215EA671D009DC052 /* FMYouTubePlayerViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMYouTubePlayerViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF539C615EA671D009DC052 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DAF539C815EA671D009DC052 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +90,8 @@
 		DAF539B715EA671C009DC052 = {
 			isa = PBXGroup;
 			children = (
+				DABBB67615EA786700D317A8 /* LICENSE */,
+				DABBB67715EA786700D317A8 /* README.md */,
 				DAF539CC15EA671D009DC052 /* FMYouTubePlayerViewController */,
 				DAF539ED15EA671D009DC052 /* FMYouTubePlayerViewControllerTests */,
 				DAF539C515EA671D009DC052 /* Frameworks */,
@@ -454,6 +458,7 @@
 				DAF539FA15EA671D009DC052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAF539FB15EA671D009DC052 /* Build configuration list for PBXNativeTarget "FMYouTubePlayerViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +467,7 @@
 				DAF539FD15EA671D009DC052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

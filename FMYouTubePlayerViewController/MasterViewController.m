@@ -80,7 +80,6 @@
     NSString *videoId = [url componentsSeparatedByString:@"/"].lastObject;
     
     FMYouTubePlayerViewController *vc = [[FMYouTubePlayerViewController alloc] initWithVideoId:videoId];
-    //    [self presentViewController:vc animated:YES completion:nil];
     [self presentMoviePlayerViewControllerAnimated:vc];
 }
 
