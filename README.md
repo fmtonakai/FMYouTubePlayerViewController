@@ -4,7 +4,7 @@ YouTubeをアプリ内で再生するためのプレーヤー
 MIT License
 
 ## 使い方
-プロジェクトの中のFMYouTubePlayerViewController.hをプロジェクト内にコピーしてください。
+プロジェクトの中のFMYouTubePlayerViewControllerディレクトリをプロジェクト内にコピーしてください。
 要:MediaPlayer framework
 
 例)
