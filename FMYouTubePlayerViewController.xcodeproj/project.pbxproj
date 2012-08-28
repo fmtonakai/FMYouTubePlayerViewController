@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DABBB67B15EA93BA00D317A8 /* FMYouTubeVideoSourceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = DABBB67A15EA93BA00D317A8 /* FMYouTubeVideoSourceDetector.m */; };
 		DAF539C715EA671D009DC052 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF539C615EA671D009DC052 /* UIKit.framework */; };
 		DAF539C915EA671D009DC052 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF539C815EA671D009DC052 /* Foundation.framework */; };
 		DAF539CB15EA671D009DC052 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF539CA15EA671D009DC052 /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		DABBB67615EA786700D317A8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DABBB67715EA786700D317A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DABBB67915EA93BA00D317A8 /* FMYouTubeVideoSourceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYouTubeVideoSourceDetector.h; sourceTree = "<group>"; };
+		DABBB67A15EA93BA00D317A8 /* FMYouTubeVideoSourceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYouTubeVideoSourceDetector.m; sourceTree = "<group>"; };
 		DAF539C215EA671D009DC052 /* FMYouTubePlayerViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMYouTubePlayerViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF539C615EA671D009DC052 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DAF539C815EA671D009DC052 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -169,8 +172,10 @@
 			children = (
 				DAF53A0115EA6759009DC052 /* FMYouTubePlayerViewController.h */,
 				DAF53A0215EA6759009DC052 /* FMYouTubePlayerViewController.m */,
+				DABBB67915EA93BA00D317A8 /* FMYouTubeVideoSourceDetector.h */,
+				DABBB67A15EA93BA00D317A8 /* FMYouTubeVideoSourceDetector.m */,
 			);
-			name = FMYouTubePlayerViewController;
+			path = FMYouTubePlayerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +289,7 @@
 				DAF539D715EA671D009DC052 /* AppDelegate.m in Sources */,
 				DAF539DD15EA671D009DC052 /* MasterViewController.m in Sources */,
 				DAF53A0315EA6759009DC052 /* FMYouTubePlayerViewController.m in Sources */,
+				DABBB67B15EA93BA00D317A8 /* FMYouTubeVideoSourceDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

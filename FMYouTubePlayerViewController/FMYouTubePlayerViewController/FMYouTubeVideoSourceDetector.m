@@ -1,12 +1,13 @@
 //
-//  YouTubePlayerViewController.m
-//  YouTubePlayer
+//  FMYouTubeSourceDetector.m
+//  FMYouTubePlayerViewController
 //
-//  Created by fm.tonakai on 2012/08/25.
+//  Created by fm.tonakai on 2012/08/27.
 //  Copyright (c) 2012年 fm.tonakai. All rights reserved.
 //
 
-#import "FMYouTubePlayerViewController.h"
+#import "FMYouTubeVideoSourceDetector.h"
+#import <UIKit/UIKit.h>
 
 static NSString *embedYoutubeFormat =
 @"<div id='ytplayer'></div>"
@@ -39,44 +40,23 @@ static NSString *embedYoutubeFormat =
 "}"
 "</script>";
 
+@interface FMYouTubeVideoSourceDetector () <UIWebViewDelegate>
 
-@interface FMYouTubePlayerViewController () <UIWebViewDelegate>
 -(UIWebView *)webView;
 
 @end
 
-@implementation FMYouTubePlayerViewController
+@implementation FMYouTubeVideoSourceDetector
 {
-    NSString *_videoId;
-    NSURL *_sourceURL;
     UIWebView *_webView;
+    FMYouTubeViewSourceDetectorCompletionBlock _completion;
 }
 
--(id)initWithVideoId:(NSString *)videoId
+-(void)detectSourceURLofVideoId:(NSString *)videoId completion:(FMYouTubeViewSourceDetectorCompletionBlock)completion
 {
-    self = [super init];
-    if (self) {
-        _videoId = videoId;
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    [self startDetectVideoSourceURL];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(NSString *)videoId
-{
-    return _videoId;
+    _completion = [completion copy];
+    NSString *html = [NSString stringWithFormat:embedYoutubeFormat, videoId];
+    [self.webView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
 }
 
 -(UIWebView *)webView
@@ -88,30 +68,28 @@ static NSString *embedYoutubeFormat =
     return _webView;
 }
 
--(void)startDetectVideoSourceURL;
-{
-    NSString *html = [NSString stringWithFormat:embedYoutubeFormat, self.videoId];
-    [self.webView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
-}
-
--(void)playVideo
-{
-    self.moviePlayer.contentURL = _sourceURL;
-    [self.moviePlayer play];
-}
-
 #pragma mark - UIWebViewDelegate
+
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     if ([request.URL.scheme isEqualToString:@"detect"]) {
         NSString *detectJs = @"player.getIframe().contentWindow.document.getElementsByTagName('video')[0].src;";
         NSString *src = [webView stringByEvaluatingJavaScriptFromString:detectJs];
-        _sourceURL = [NSURL URLWithString:src];
-        [self playVideo];
+        NSURL *sourceURL;
+        NSError *error;
+        if (src.length != 0) {
+            sourceURL = [NSURL URLWithString:src];
+        } else {
+            error = [NSError errorWithDomain:NSNetServicesErrorDomain
+                                                 code:NSNetServicesNotFoundError
+                                             userInfo:nil];
+        }
+        if (_completion) {
+            _completion(sourceURL, error);
+        }
         return NO;
     }
     return YES;
 }
-
 @end
